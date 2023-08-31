@@ -1,3 +1,4 @@
+import 'package:b_yes_no_git/config/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: "Yes No App",
       debugShowCheckedModeBanner: false,
+      theme: AppTheme().theme(),
       home: Scaffold(
         appBar: AppBar(title: const Center(child: Text("Yes No"))),
         body: Center(
