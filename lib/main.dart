@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: "Yes No App",
       debugShowCheckedModeBanner: false,
-      theme: AppTheme().theme(),
+      theme: AppTheme(selectedColor: 3).theme(),
       home: Scaffold(
         appBar: AppBar(title: const Center(child: Text("Yes No"))),
         body: Center(

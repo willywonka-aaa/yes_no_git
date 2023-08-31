@@ -13,10 +13,14 @@ const List<Color> _colorThemes = [
 ];
 
 class AppTheme {
+  AppTheme({this.selectedColor = 0});
+
+  final int selectedColor;
+
   ThemeData theme() {
     return ThemeData(
       useMaterial3: true,
-      colorSchemeSeed: _colorThemes[3],
+      colorSchemeSeed: _colorThemes[selectedColor],
     );
   }
 }
