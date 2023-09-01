@@ -1,5 +1,5 @@
 import 'package:b_yes_no_git/config/theme/app_theme.dart';
-import 'package:b_yes_no_git/presentation/chat/chat_screen.dart';
+import 'package:b_yes_no_git/presentation/screens/chat/chat_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
