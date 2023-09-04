@@ -2,6 +2,7 @@ import 'package:b_yes_no_git/domain/entities/message.dart';
 import 'package:flutter/material.dart';
 
 class ChatProvider extends ChangeNotifier {
+  final ScrollController chatScrollController = ScrollController();
 
   List<Message> messageList = [
     Message(text: "Hola amor", fromWho: FromWho.me),
@@ -11,8 +12,7 @@ class ChatProvider extends ChangeNotifier {
   Future<void> sendMessage(String text) async {
     final newMessage = Message(text: text, fromWho: FromWho.me);
     messageList.add(newMessage);
-    
+
     notifyListeners();
   }
-
 }
