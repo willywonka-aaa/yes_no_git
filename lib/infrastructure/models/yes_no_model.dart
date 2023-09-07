@@ -1,3 +1,5 @@
+import 'package:b_yes_no_git/domain/entities/message.dart';
+
 class YesNoModel {
   final String answer;
   final bool forced;
@@ -9,5 +11,17 @@ class YesNoModel {
         answer: json["answer"],
         forced: json["forced"],
         image: json["image"],
+      );
+
+  Map<String, dynamic> toJson() => {
+        "answer": answer,
+        "forced": forced,
+        "image": image,
+      };
+
+  Message toMessageEntity() => Message(
+        text: answer == "yes" ? "Si" : "No",
+        fromWho: FromWho.hers,
+        imageUrl: image,
       );
 }
